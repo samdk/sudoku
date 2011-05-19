@@ -1,0 +1,35 @@
+Sam DeFabbia-Kane
+--
+
+To run the solver:
+
+    python runsudoku.py <filename>
+
+You can then enter a sudoku board 1 line at a time using the suggested format.
+(It doesn't attempt to validate input.)
+
+<filename> is optional: additional logging will be done to that file if it
+is present.
+
+
+solver.py contains the code for actually solving a sudoku board
+sudoku.py contains the code that defines and manipulates a sudoku board
+puzzle.py contains code for loading in ~11,000 sudoku puzzles from 'puzzles', 
+generated using the debian program 'sudoku'
+
+To run the solver manually on imported puzzles:
+
+	import sudoku as s
+	import solver as sol
+	import puzzles as puz
+	puzzles = puz.load_puzzles('puzzles')
+	ps = puzzles['medium'][:10]
+	count = 0
+	for p in ps:
+		b = s.Board(p)
+		bs = sol.solve(b)
+		if bs.is_solved(): count += 1
+	print count # the number of correct puzzles
+
+(Printing a 'Board' object will pretty-print a sudoku board.)
+

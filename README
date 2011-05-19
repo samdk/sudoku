@@ -1,5 +1,4 @@
-Sam DeFabbia-Kane
---
+This is a sudoku solver built as a project for an AI class at Wesleyan University. The assignment was to implement a sudoku solver that solved sudoku puzzles like a human rather than like a computer, modeling our own sudoku-solving strategies. (Since I'm not very good at solving sudoku, the actual strategies are straightforward and uninteresting.) The code that implements the sudoku game/board (in sudoku.py) was designed to be expressive, so that the strategy implementations were very similar to their high-level descriptions. This comes at the cost of some efficiency, but that wasn't an issue in the context of the original assignment.
 
 To run the solver:
 
